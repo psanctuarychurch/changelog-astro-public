@@ -64,6 +64,11 @@ npm install
 npm run dev
 ```
 
+## 📄 License
+- 💻 **Code:** MIT, see [`LICENSE`](LICENSE)
+- 📝 **Written content** (docs, changelog and library prose, READMEs): CC BY-SA 4.0, see [`LICENSE-CONTENT`](LICENSE-CONTENT)
+- 🏷️ **Names, logos and marks:** not covered by either license, see [`TRADEMARKS.md`](TRADEMARKS.md)
+
 ---
 
 *Maintained by [psanctuarychurch](https://github.com/psanctuarychurch) with Anthropic's Claude Code CLI.*
