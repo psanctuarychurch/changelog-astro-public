@@ -49,6 +49,7 @@ title: "Plain-language title"
 date: "YYYY-MM-DD"
 priority: "P2-medium" # P1-high, P2-medium (default), or P3-low
 repo: "github" # which project card it belongs to
+who: "Christopher with Alfred" # first names; see PEOPLE in astro/src/data/site.ts
 ---
 ```
 
