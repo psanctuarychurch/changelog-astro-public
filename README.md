@@ -14,6 +14,9 @@
 <a href="https://psanctuarychurch.github.io/"><i class="ph ph-house-simple"></i> Entry portal</a> ·
 <a href="https://psanctuarychurch.github.io/changelog-astro-public/changelog"><i class="ph ph-clock-counter-clockwise"></i> Changelog</a> ·
 <a href="https://psanctuarychurch.github.io/changelog-astro-public/library"><i class="ph ph-books"></i> Library</a> ·
+<a href="https://psanctuarychurch.github.io/changelog-astro-public/map"><i class="ph ph-map-trifold"></i> Map</a> ·
+<a href="https://psanctuarychurch.github.io/changelog-astro-public/roadmap"><i class="ph ph-path"></i> Roadmap</a> ·
+<a href="https://psanctuarychurch.github.io/changelog-astro-public/sustainability"><i class="ph ph-plant"></i> Sustainability</a> ·
 <a href="https://www.psanctuary.org"><i class="ph ph-globe-simple"></i> psanctuary.org</a>
 
 ---
@@ -21,7 +24,7 @@
 ## 👋 What this is
 
 A plain-language, dated record of the technical work done for [Psanctuary](https://www.psanctuary.org),
-a sacred mushroom church, on GitHub, plus a `/library` of longer write-ups for anyone curious how
+a sacred mushroom church, on GitHub (this organization is its official, professional home here), plus a `/library` of longer write-ups for anyone curious how
 it's built. It's written for someone outside the work who cares about it, not for the people already
 inside it.
 
@@ -33,6 +36,8 @@ technical side. This README is also the live site's homepage.
 - `changelog/`: one markdown file per entry, named `YYYY-MM-DD-short-slug.md`.
 - `library/`: longer, standalone write-ups that don't belong to one entry.
 - `astro/`: the Astro site itself.
+- `ROADMAP.md` and `SUSTAINABILITY.md`: where this is headed, and what keeps it running. Each is also
+  a page on the site (`/roadmap`, `/sustainability`).
 - `.github/workflows/sync-public.yml`: on every push to `main`, builds the site and publishes only
   the finished pages (never this source) to
   [`psanctuarychurch/changelog-astro-public`](https://github.com/psanctuarychurch/changelog-astro-public).
@@ -49,7 +54,7 @@ title: "Plain-language title"
 date: "YYYY-MM-DD"
 priority: "P2-medium" # P1-high, P2-medium (default), or P3-low
 repo: "github" # which project card it belongs to
-who: "Christopher with Alfred" # first names; see PEOPLE in astro/src/data/site.ts
+who: "Christopher W" # first name + last initial; see PEOPLE in astro/src/data/site.ts
 ---
 ```
 
