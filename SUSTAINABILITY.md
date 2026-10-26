@@ -30,11 +30,26 @@ tokens), make a new classic token with the `repo` and `workflow` scopes, paste i
 `changelog-astro` → Settings → Secrets → Actions → `PUBLIC_REPO_TOKEN`, then run the workflow by
 hand once (Actions → Sync Public Changelog → Run workflow) and check this page's footer date.
 
+### 🔍 The ledger's read-only token (`LEDGER_TOKEN`)
+
+The ledger reads the organization's private repositories, shown masked, with a separate read-only
+`LEDGER_TOKEN` when one is set, so it never needs the write-capable publishing token.
+
+**Set since 2026-10-26:**
+- **The token:** the fine-grained `ledger-read-psanctuarychurch`, resource owner `psanctuarychurch`.
+- **Reach:** all of its repositories, with read-only "Contents".
+- **No expiration.**
+
+*To replace it:* make a new read-only token the same way. Set it as `LEDGER_TOKEN` on `changelog-astro`
+(`pbpaste | gh secret set LEDGER_TOKEN -R psanctuarychurch/changelog-astro`), and run the workflow once. If no
+token can read a repository, its masked rows carry over from the committed snapshot.
+
 ### 🗓️ The daily ledger rebuild
 
 The [ledger](https://psanctuarychurch.github.io/changelog-astro-public/ledger) lists every public change in plain words. So it stays fresh on days nothing
 else changes, the publishing workflow also runs **every day at 10:29 UTC**. It uses a few minutes of
-the organization's Actions allowance a day.
+the organization's Actions allowance a day. The workflow builds on **Node 24** (since 2026-10-26): Astro 7.4 needs
+Node 22.23.4 or newer, and a bare `22` resolved to 22.23.3.
 
 *What to do:* if the ledger's newest day looks old, open the workflow's run history. A failed
 scheduled run usually means the token above, or GitHub's API having a bad moment (the build then
